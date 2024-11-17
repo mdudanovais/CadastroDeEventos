@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadastroDeEventos.Views.Cadastro"
+             Title="Cadastro"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Gray300}">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="25" Spacing="20">
+                <Label Text="Cadastro de Eventos" FontFamily="OpenSansRegular" FontSize="35" TextColor="{StaticResource MidnightBlue}"/>
+
+                <Label Text="Nome do Evento:" FontFamily="OpenSansRegular" 
+                       FontSize="15" TextColor="{StaticResource Magenta}"/>
+                <Entry x:Name="NomeEventoEntry" Placeholder="Ex: Reunião de custo" />
+
+                <Label Text="Data de Início:" FontFamily="OpenSansRegular" 
+                       FontSize="15" TextColor="{StaticResource Magenta}"/>
+                <DatePicker x:Name="DataInicioPicker"
+                            Format="dd/MM/yyyy" 
+                            DateSelected="OnDataInicioChanged" />
+
+                <Label Text="Data de Término:" FontFamily="OpenSansRegular" 
+                       FontSize="15" TextColor="{StaticResource Magenta}" />
+                <DatePicker x:Name="DataTerminoPicker"
+                            Format="dd/MM/yyyy" />
+
+                <Label Text="Número de Participantes:" FontFamily="OpenSansRegular" 
+                       FontSize="15" TextColor="{StaticResource Magenta}" />
+                <Entry x:Name="NumeroParticipantesEntry" 
+                       Keyboard="Numeric" Placeholder="Ex: 10" />
+
+                <Label Text="Local do Evento:" FontFamily="OpenSansRegular" 
+                       FontSize="15" TextColor="{StaticResource Magenta}" />
+                <Entry x:Name="LocalEventoEntry" Placeholder="Ex: Empresa DS" />
+
+                <Label Text="Custo por Participante" FontFamily="OpenSansRegular" 
+                       FontSize="15" TextColor="{StaticResource Magenta}" />
+                <Entry x:Name="ParticipanteCustoEntry" 
+                Keyboard="Numeric" Placeholder="Ex: 25" />
+
+                <Button Text="Enviar Cadastro" BackgroundColor="{StaticResource MidnightBlue}"
+                        TextColor="{StaticResource Gray300}" HorizontalOptions="Center" Clicked="Button_Clicked" />
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+    
+</ContentPage>

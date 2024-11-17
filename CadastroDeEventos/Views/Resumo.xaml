@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadastroDeEventos.Views.Resumo"
+             Title="Resumo" NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Gray300}">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20" Spacing="15">
+                <Label Text="Resumo do Evento" FontSize="35" FontFamily="OpenSansRegular" TextColor="{StaticResource MidnightBlue}"
+                       HorizontalOptions="Center" />
+
+                <Label Text="Nome:" FontFamily="OpenSansRegular" FontSize="15"
+                       TextColor="{StaticResource Magenta}"/>
+                <Label Text="{Binding NomeEvento}" />
+
+                <Label Text="Local:" FontFamily="OpenSansRegular" FontSize="15"
+                       TextColor="{StaticResource Magenta}" />
+                <Label Text="{Binding LocalEvento}" />
+
+                <Label Text="Data de Início:" FontFamily="OpenSansRegular" FontSize="15"
+                       TextColor="{StaticResource Magenta}" />
+                <Label Text="{Binding DataInicio, StringFormat='{}{0:dd/MM/yyyy}'}" />
+
+                <Label Text="Data de Término:" FontFamily="OpenSansRegular" FontSize="15"
+                       TextColor="{StaticResource Magenta}" />
+                <Label Text="{Binding DataTermino, StringFormat='{}{0:dd/MM/yyyy}'}" />
+
+                <Label Text="Duração (em dias):" FontFamily="OpenSansRegular" FontSize="15"
+                       TextColor="{StaticResource Magenta}" />
+                <Label Text="{Binding DuracaoEvento.Days, StringFormat='Duração: {0} dias'}" />
+
+                <Label Text="Número de Participantes:" FontFamily="OpenSansRegular" FontSize="15"
+                       TextColor="{StaticResource Magenta}" />
+                <Label Text="{Binding NumeroParticipantes}" />
+
+                <Label Text="Custo por participante:" FontFamily="OpenSansRegular" FontSize="15"
+                       TextColor="{StaticResource Magenta}"  />
+                <Label Text="{Binding ParticipanteCusto}" />
+
+                <Label Text="Custo Total:" FontFamily="OpenSansRegular" FontSize="15"
+                       TextColor="{StaticResource Magenta}" />
+                <Label Text="{Binding CustoEvento, StringFormat='R$ {0:N2}'}" />
+
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+
+</ContentPage>
